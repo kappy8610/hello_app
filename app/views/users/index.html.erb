@@ -1,0 +1,6 @@
+<h1>ユーザー一覧</h1>
+
+<% @users.each do |user|%>
+  <p>name : <%= link_to user.name, user_path(user.id) %></p>
+  <p><%= link_to "編集", edit_user_path(user.id) %></p>
+<% end %>
