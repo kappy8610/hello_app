@@ -1,19 +1,4 @@
 <h1>新規登録</h1>
 <p>新規登録するユーザーの情報を入力するページ</p>
 
-<% if alert %>
-  <p><%= alert %></p>
-<% end %>
-
-<%= form_for(@user) do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-
-  <%= f.submit "新規登録"%>
-<% end %>
+<%= render 'form' %>
